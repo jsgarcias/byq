@@ -79,10 +79,6 @@
             height: 400px !important;
         }
 
-
-
-
-
         ul {
             display: flex;
             position: absolute;
@@ -133,6 +129,51 @@
         ul li:nth-child(5) a {
             background: #517fa4;
         }
+
+        .social .cell {
+            position: relative;
+
+        }
+
+        .social {
+            padding-top: 20px;
+        }
+
+        .card{
+            position: relative;
+        }
+
+        .card img{
+            border: 1px solid #000000;
+        }
+
+        .card h1{
+            font-family: 'PT Serif', serif;
+            margin-bottom: 0;
+            color: #5c5c5c;
+            top:50%;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+        }
+
+        .card h3{
+            font-family: 'Kalam', cursive;
+            color: #5c5c5c;
+            top:65%;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+        }
+
+        .card h4{
+            font-family: 'Kalam', cursive;
+            color: #5c5c5c;
+            top:75%;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -181,8 +222,8 @@
         </div>
     </div>
 
-    <div class="grid-container grid-x grid-padding-x">
-        <div class="cell medium-6 small-12 " style="position: relative;">
+    <div class="grid-container grid-x grid-padding-x social">
+        <div class="cell medium-6 small-12 ">
             <ul>
                 <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
@@ -191,8 +232,14 @@
                 <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
             </ul>
         </div>
-        <div class="cell medium-6 small-12 ">
-            Fecha hora, lugar
+        <div class="cell medium-6 small-12 card">
+            <!-- Fecha hora, lugar -->
+            <figure>
+                <img src="img/layout.jpg">
+            </figure>
+            <h1>John Doe</h1>
+            <h3>Wedding <i class="fas fa-crown"></i></h3>
+            <h4>Date: 02/14/2020 <i class="fas fa-calendar-alt"></i></h4>
         </div>
     </div>
 
