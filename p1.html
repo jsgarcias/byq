@@ -54,6 +54,15 @@
             padding-top: 20px;
         }
 
+        .description .cell {
+            position: relative;
+        }
+
+        .description .text {
+            position: absolute;
+            top: 15%;
+        }
+
         .description h1 {
             font-family: 'Ma Shan Zheng', cursive;
             text-align: center;
@@ -63,10 +72,66 @@
         .description p {
             text-align: center;
             color: #5c5c5c;
+
         }
 
         #leaflet {
             height: 400px !important;
+        }
+
+
+
+
+
+        ul {
+            display: flex;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        ul li a {
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            font-size: 25px;
+            margin: 0 10px;
+            display: block;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 0 3px #CCC;
+        }
+
+        ul li a .fab {
+            position: relative;
+            color: #fff;
+        }
+
+        ul li:nth-child(1) a {
+            background: #3b5999;
+        }
+
+        ul li:nth-child(2) a {
+            background: #55acee;
+        }
+
+        ul li:nth-child(3) a {
+            background: #b31217;
+        }
+
+        ul li:nth-child(4) a {
+            background: #0077b5;
+        }
+
+        ul li:nth-child(5) a {
+            background: #517fa4;
         }
     </style>
 </head>
@@ -97,7 +162,7 @@
 
     <div class="grid-container grid-x grid-padding-x description">
         <div class="cell medium-6 small-12 ">
-            <div>
+            <div class="text">
                 <h1>hello & welcome</h1>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
@@ -113,6 +178,21 @@
         </div>
         <div class="cell medium-6 small-12 ">
             <div id="leaflet"></div>
+        </div>
+    </div>
+
+    <div class="grid-container grid-x grid-padding-x">
+        <div class="cell medium-6 small-12 " style="position: relative;">
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <div class="cell medium-6 small-12 ">
+            Fecha hora, lugar
         </div>
     </div>
 
