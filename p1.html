@@ -1,29 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Plantilla 1</title>
     <link rel="stylesheet" href="css/foundation.min.css">
+    <script type='text/javascript'
+        src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AlR6iZ_j01gbAWx3yGL_-_F0Xaat9fugq_4VGvFbSc_WXkIZCVsyyCJJRDCyyBsN&CountryRegionIso2=US&adminDistrict=FL'
+        async defer></script>
+    <script src="https://kit.fontawesome.com/9ffe6d7e5f.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Kalam|PT+Serif&display=swap');
+
+        .main-gallery figure img {
+            height: 540px;
+        }
+
+        .main-gallery .cell {
+            text-align: center;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .title-event {
+            width: 100%;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .title-event h1 {
+            font-family: 'PT Serif', serif;
+            margin-bottom: 0;
+            color: #5c5c5c;
+        }
+
+        .title-event h3 {
+            font-family: 'Kalam', cursive;
+            color: #5c5c5c;
+            ;
+        }
+
+        .main-gallery img {
+            transition: transform .3s;
+            width: 100%;
+        }
+
+        .main-gallery img:hover {
+            transform: translate3d(0, -2px, 0) scale3d(1.05, 1.05, 1.05);
+        }
+
+        .description{
+            padding-top: 20px;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="grid-container grid-x grid-padding-x">
-        <div class="cell  medium-4 small-12 ">
-            <figure>
-                <img src="img/a.jpg">
-            </figure>
-        </div>
-        <div class="cell  medium-4 small-12 ">
+    <div class="title-event">
+        <h1>John Doe</h1>
+        <h3>Wedding <i class="fas fa-crown"></i></h3>
+    </div>
+
+    <div class="grid-container grid-x grid-padding-x main-gallery">
+        <div class="cell medium-4 small-12 ">
             <figure>
                 <img src="img/b.jpg">
             </figure>
         </div>
-        <div class="cell  medium-4 small-12 ">
+        <div class="cell medium-4 small-12 ">
+            <figure>
+                <img src="img/a.jpg">
+            </figure>
+        </div>
+        <div class="cell medium-4 small-12 ">
             <figure>
                 <img src="img/c.jpg">
             </figure>
         </div>
     </div>
+
+    <div class="grid-container grid-x grid-padding-x description">
+        <div class="cell medium-6 small-12 ">
+            <h2>hello & welcome</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div class="cell medium-6 small-12 ">
+            <div id="leaflet"></div>
+        </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script>
+        function GetMap() {
+            $.ajax({
+                url: "https://dev.virtualearth.net/REST/v1/Locations/14,638724, -90,512993?key=AlR6iZ_j01gbAWx3yGL_-_F0Xaat9fugq_4VGvFbSc_WXkIZCVsyyCJJRDCyyBsN",
+                dataType: "jsonp",
+                jsonp: "jsonp",
+                success: function (r) {
+                    var data = r.resourceSets[0].resources[0].point.coordinates
+                    var map = new Microsoft.Maps.Map('#leaflet', {
+                        credentials: 'AlR6iZ_j01gbAWx3yGL_-_F0Xaat9fugq_4VGvFbSc_WXkIZCVsyyCJJRDCyyBsN',
+                        center: new Microsoft.Maps.Location(data[0], data[1]),
+                        mapTypeId: Microsoft.Maps.MapTypeId.grayscale,
+                        zoom: 16
+                    });
+                },
+                error: function (e) {
+                    console.log(e.statusText)
+                }
+            });
+        }
+    </script>
 </body>
+
 </html>
