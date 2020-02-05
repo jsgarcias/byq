@@ -139,40 +139,46 @@
             padding-top: 20px;
         }
 
-        .card{
+        .card {
             position: relative;
         }
 
-        .card img{
+        .card img {
             border: 1px solid #000000;
         }
 
-        .card h1{
+        .card h1 {
             font-family: 'PT Serif', serif;
             margin-bottom: 0;
             color: #5c5c5c;
-            top:50%;
+            top: 50%;
             position: absolute;
             text-align: center;
             width: 100%;
         }
 
-        .card h3{
+        .card h3 {
             font-family: 'Kalam', cursive;
             color: #5c5c5c;
-            top:65%;
+            top: 65%;
             position: absolute;
             text-align: center;
             width: 100%;
         }
 
-        .card h4{
+        .card h4 {
             font-family: 'Kalam', cursive;
             color: #5c5c5c;
-            top:75%;
+            top: 75%;
             position: absolute;
             text-align: center;
             width: 100%;
+        }
+
+        @media screen and (max-width: 39.9375em) {
+            .social .network {
+                padding-top: 60px;
+            }
         }
     </style>
 </head>
@@ -223,15 +229,6 @@
     </div>
 
     <div class="grid-container grid-x grid-padding-x social">
-        <div class="cell medium-6 small-12 ">
-            <ul>
-                <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-            </ul>
-        </div>
         <div class="cell medium-6 small-12 card">
             <!-- Fecha hora, lugar -->
             <figure>
@@ -240,6 +237,15 @@
             <h1>John Doe</h1>
             <h3>Wedding <i class="fas fa-crown"></i></h3>
             <h4>Date: 02/14/2020 <i class="fas fa-calendar-alt"></i></h4>
+        </div>
+        <div class="cell medium-6 small-12 network">
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
         </div>
     </div>
 
