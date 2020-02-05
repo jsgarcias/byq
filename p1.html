@@ -8,11 +8,11 @@
     <title>Plantilla 1</title>
     <link rel="stylesheet" href="css/foundation.min.css">
     <script type='text/javascript'
-        src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AlR6iZ_j01gbAWx3yGL_-_F0Xaat9fugq_4VGvFbSc_WXkIZCVsyyCJJRDCyyBsN&CountryRegionIso2=US&adminDistrict=FL'
+        src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AlR6iZ_j01gbAWx3yGL_-_F0Xaat9fugq_4VGvFbSc_WXkIZCVsyyCJJRDCyyBsN&CountryRegionIso2=US&adminDistrict=FL'
         async defer></script>
     <script src="https://kit.fontawesome.com/9ffe6d7e5f.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Kalam|PT+Serif&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Kalam|Ma+Shan+Zheng|PT+Serif&display=swap');
 
         .main-gallery figure img {
             height: 540px;
@@ -39,7 +39,6 @@
         .title-event h3 {
             font-family: 'Kalam', cursive;
             color: #5c5c5c;
-            ;
         }
 
         .main-gallery img {
@@ -51,8 +50,23 @@
             transform: translate3d(0, -2px, 0) scale3d(1.05, 1.05, 1.05);
         }
 
-        .description{
+        .description {
             padding-top: 20px;
+        }
+
+        .description h1 {
+            font-family: 'Ma Shan Zheng', cursive;
+            text-align: center;
+            color: #5c5c5c;
+        }
+
+        .description p {
+            text-align: center;
+            color: #5c5c5c;
+        }
+
+        #leaflet {
+            height: 400px !important;
         }
     </style>
 </head>
@@ -83,13 +97,19 @@
 
     <div class="grid-container grid-x grid-padding-x description">
         <div class="cell medium-6 small-12 ">
-            <h2>hello & welcome</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <div>
+                <h1>hello & welcome</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and
+                    scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap
+                    into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with
+                    the
+                    release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing
+                    software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
         </div>
         <div class="cell medium-6 small-12 ">
             <div id="leaflet"></div>
