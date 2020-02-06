@@ -12,10 +12,10 @@
         async defer></script>
     <script src="https://kit.fontawesome.com/9ffe6d7e5f.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Kalam|Ma+Shan+Zheng|PT+Serif&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Great+Vibes&display=swa');
 
         .main-gallery figure img {
-            height: 540px;
+            height: 500px;
         }
 
         .main-gallery .cell {
@@ -31,13 +31,13 @@
         }
 
         .title-event h1 {
-            font-family: 'PT Serif', serif;
+            font-family: 'Great Vibes', cursive;
             margin-bottom: 0;
             color: #5c5c5c;
         }
 
         .title-event h3 {
-            font-family: 'Kalam', cursive;
+            font-family: 'Great Vibes', cursive;
             color: #5c5c5c;
         }
 
@@ -54,17 +54,10 @@
             padding-top: 20px;
         }
 
-        .description .cell {
-            position: relative;
-        }
-
-        .description .text {
-            position: absolute;
-            top: 15%;
-        }
+        
 
         .description h1 {
-            font-family: 'Ma Shan Zheng', cursive;
+            font-family: 'Great Vibes', cursive;
             text-align: center;
             color: #5c5c5c;
         }
@@ -72,6 +65,7 @@
         .description p {
             text-align: center;
             color: #5c5c5c;
+            font-family: 'Barlow Semi Condensed', sans-serif;
 
         }
 
@@ -139,38 +133,52 @@
             padding-top: 20px;
         }
 
-        .card {
-            position: relative;
+        .descripcionText
+        {
+            width: 50%; margin: auto;
         }
 
-        .card img {
-            border: 1px solid #000000;
+        .card
+        {
+            padding-top:20px;
+            padding-bottom:20px;
+            box-shadow:0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
         }
+
+       
 
         .card h1 {
-            font-family: 'PT Serif', serif;
+            font-family: 'Great Vibes', cursive;
             margin-bottom: 0;
             color: #5c5c5c;
             top: 50%;
-            position: absolute;
             text-align: center;
             width: 100%;
         }
 
         .card h3 {
-            font-family: 'Kalam', cursive;
+            font-family: 'Great Vibes', cursive;
             color: #5c5c5c;
             top: 65%;
-            position: absolute;
+
             text-align: center;
             width: 100%;
         }
 
         .card h4 {
-            font-family: 'Kalam', cursive;
+            font-family: 'Great Vibes', cursive;
             color: #5c5c5c;
             top: 75%;
-            position: absolute;
+  
+            text-align: center;
+            width: 100%;
+        }
+
+        .card h5 {
+            font-family: 'Great Vibes', cursive;
+            color: #5c5c5c;
+            top: 75%;
+  
             text-align: center;
             width: 100%;
         }
@@ -179,15 +187,21 @@
             .social .network {
                 padding-top: 60px;
             }
+
+            .social .network ul
+            {
+                margin:auto;
+            }
+
+            .descripcionText {
+                width:100%;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="title-event">
-        <h1>John Doe</h1>
-        <h3>Wedding <i class="fas fa-crown"></i></h3>
-    </div>
+    
 
     <div class="grid-container grid-x grid-padding-x main-gallery">
         <div class="cell medium-4 small-12 ">
@@ -208,36 +222,45 @@
     </div>
 
     <div class="grid-container grid-x grid-padding-x description">
-        <div class="cell medium-6 small-12 ">
+        <div class="cell medium-12 small-12 ">
             <div class="text">
-                <h1>hello & welcome</h1>
+
+                <div class="title-event">
+                    <h1>John Doe & Jane Foster</h1>
+                    <h3>Our Wedding <i class="fas fa-crown"></i></h3>
+                </div>
+
+
+                <div class="descripcionText">
+                <p>We invite you to this special day to share with us our love and happiness
+                </p>
+
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
                     and
                     scrambled it to make a type specimen book. It has survived not only five centuries, but also the
                     leap
                     into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                    the
-                    release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing
-                    software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                 
+                </p>
+               
+            </div>
+            <div class="card descripcionText" >
+            
+           
+                <h5><strong>Place: </strong> San Francisco, 18 California Street 1100. <i class="fas fa-crown"></i></h5>
+                <h5><strong>Date: </strong>May 1st 2020 <i class="fas fa-calendar-alt"></i></h5>
+                <h5><strong>Time: </strong>18:00 <i class="fas fa-calendar-alt"></i></h5>
+            </div>
             </div>
         </div>
-        <div class="cell medium-6 small-12 ">
-            <div id="leaflet"></div>
-        </div>
+      
     </div>
 
+  
+
+
     <div class="grid-container grid-x grid-padding-x social">
-        <div class="cell medium-6 small-12 card">
-            <!-- Fecha hora, lugar -->
-            <figure>
-                <img src="img/layout.jpg">
-            </figure>
-            <h1>John Doe</h1>
-            <h3>Wedding <i class="fas fa-crown"></i></h3>
-            <h4>Date: 02/14/2020 <i class="fas fa-calendar-alt"></i></h4>
-        </div>
         <div class="cell medium-6 small-12 network">
             <ul>
                 <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
@@ -247,7 +270,13 @@
                 <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
             </ul>
         </div>
+        <div class="cell medium-6 small-12 ">
+            <div id="leaflet"></div>
+        </div>
     </div>
+
+
+
 
     <script src="js/jquery.js"></script>
     <script>
