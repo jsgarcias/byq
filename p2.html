@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Plantilla 2</title>
+    <link rel="stylesheet" href="css/foundation.min.css">
+    <script type='text/javascript'
+        src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AlR6iZ_j01gbAWx3yGL_-_F0Xaat9fugq_4VGvFbSc_WXkIZCVsyyCJJRDCyyBsN&CountryRegionIso2=US&adminDistrict=FL'
+        async defer></script>
+    <script src="https://kit.fontawesome.com/9ffe6d7e5f.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Great+Vibes&display=swa');
+
+        .main-gallery figure img {
+            height: 500px;
+        }
+
+        .main-gallery .cell {
+            text-align: center;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .title-event {
+            width: 100%;
+            text-align: center;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+
+        .title-event h1 {
+            font-family: 'Great Vibes', cursive;
+            margin-bottom: 0;
+            color: #5c5c5c;
+        }
+
+        .title-event h3 {
+            font-family: 'Great Vibes', cursive;
+            color: #5c5c5c;
+        }
+
+        .main-gallery img {
+            transition: transform .3s;
+            width: 100%;
+        }
+
+        .main-gallery img:hover {
+            transform: translate3d(0, -2px, 0) scale3d(1.05, 1.05, 1.05);
+        }
+
+        .description {
+            padding-top: 20px;
+        }
+
+
+
+        .description h1 {
+            font-family: 'Great Vibes', cursive;
+            text-align: center;
+            color: #5c5c5c;
+        }
+
+        .description p {
+            text-align: center;
+            color: #5c5c5c;
+            font-family: 'Barlow Semi Condensed', sans-serif;
+
+        }
+
+        #leaflet {
+            height: 400px !important;
+        }
+
+        .network ul {
+            display: flex;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .network ul li {
+            list-style: none;
+        }
+
+        .network ul li a {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            font-size: 18px;
+            margin: 0 10px;
+            display: block;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 0 3px #CCC;
+        }
+
+        .network ul li a .fab {
+            position: relative;
+            color: #fff;
+        }
+
+        .network ul li:nth-child(1) a {
+            background: #3b5999;
+        }
+
+        .network ul li:nth-child(2) a {
+            background: #55acee;
+        }
+
+        .network ul li:nth-child(3) a {
+            background: #b31217;
+        }
+
+        .network ul li:nth-child(4) a {
+            background: #0077b5;
+        }
+
+        .network ul li:nth-child(5) a {
+            background: #517fa4;
+        }
+
+        .social .cell {
+            position: relative;
+        }
+
+        .social {
+            padding-top: 20px;
+        }
+
+        .descripcionText {
+            width: 90%;
+            margin: auto;
+        }
+
+        .card {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+        }
+
+        .card h1 {
+            font-family: 'Great Vibes', cursive;
+            margin-bottom: 0;
+            color: #5c5c5c;
+            top: 50%;
+            text-align: center;
+            width: 100%;
+        }
+
+        .card h3 {
+            font-family: 'Great Vibes', cursive;
+            color: #5c5c5c;
+            top: 65%;
+
+            text-align: center;
+            width: 100%;
+        }
+
+        .card h4 {
+            font-family: 'Great Vibes', cursive;
+            color: #5c5c5c;
+            top: 75%;
+
+            text-align: center;
+            width: 100%;
+        }
+
+        .card h5 {
+            font-family: 'Great Vibes', cursive;
+            color: #5c5c5c;
+            top: 75%;
+
+            text-align: center;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 39.9375em) {
+            .social .network {
+                padding-top: 60px;
+            }
+
+            .social .network ul {
+                margin: auto;
+            }
+
+            .descripcionText {
+                width: 100%;
+            }
+
+            .title-event h1 {
+                font-family: 'Great Vibes', cursive;
+                margin-bottom: 0;
+                color: #5c5c5c;
+                font-size: 4em;
+            }
+
+            .title-event h3 {
+                font-family: 'Great Vibes', cursive;
+                color: #5c5c5c;
+                font-size: 2em !important;
+            }
+        }
+
+        .mySlides{
+            height: 490px;
+            width: auto;
+            margin: auto;
+        }
+
+        .main-slider{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container grid-x grid-padding-x title-event">
+        <div class="cell medium-6 small-12 main-slider ">
+            <img class="mySlides animacionSlide" src="img/b.jpg">
+            <img class="mySlides animacionSlide" src="img/a.jpg">
+            <img class="mySlides animacionSlide" src="img/c.jpg">
+        </div>
+        <div class="cell medium-6 small-12 network">
+            <h1>John Doe & Jane Foster</h1>
+            <h3>Our Wedding <i class="fas fa-crown"></i></h3>
+            <div class="text">
+
+
+
+                <div class="descripcionText">
+                    <p>We invite you to this special day to share with us our love and happiness
+                    </p>
+
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                        type
+                        and
+                        scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                        leap
+                        into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                        with
+
+                    </p>
+
+                </div>
+                <div class="card descripcionText">
+
+
+                    <h5><strong>Place: </strong> San Francisco, 18 California Street 1100. <i class="fas fa-crown"></i>
+                    </h5>
+                    <h5><strong>Date: </strong>May 1st 2020 <i class="fas fa-calendar-alt"></i></h5>
+                    <h5><strong>Time: </strong>18:00 <i class="fas fa-calendar-alt"></i></h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="grid-container grid-x grid-padding-x description">
+        <div class="cell medium-12 small-12 ">
+
+        </div>
+
+    </div>
+
+
+
+
+    <div class="grid-container grid-x grid-padding-x social">
+        <div class="cell medium-6 small-12 network">
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <div class="cell medium-6 small-12 ">
+            <div id="leaflet"></div>
+        </div>
+    </div>
+
+
+
+
+    <script src="js/jquery.js"></script>
+    <script>
+        var slideIndex = 0;
+        carousel();
+        function GetMap() {
+            $.ajax({
+                url: "https://dev.virtualearth.net/REST/v1/Locations/14,638724, -90,512993?key=AlR6iZ_j01gbAWx3yGL_-_F0Xaat9fugq_4VGvFbSc_WXkIZCVsyyCJJRDCyyBsN",
+                dataType: "jsonp",
+                jsonp: "jsonp",
+                success: function (r) {
+                    var data = r.resourceSets[0].resources[0].point.coordinates
+                    var map = new Microsoft.Maps.Map('#leaflet', {
+                        credentials: 'AlR6iZ_j01gbAWx3yGL_-_F0Xaat9fugq_4VGvFbSc_WXkIZCVsyyCJJRDCyyBsN',
+                        center: new Microsoft.Maps.Location(data[0], data[1]),
+                        mapTypeId: Microsoft.Maps.MapTypeId.grayscale,
+                        zoom: 16
+                    });
+                },
+                error: function (e) {
+                    console.log(e.statusText)
+                }
+            });
+        }
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) { slideIndex = 1 }
+            if (x.length > 0) { x[slideIndex - 1].style.display = "block"; }
+            setTimeout(carousel, 4000); // Change image every 2 seconds
+        }
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+
+    </script>
+</body>
+
+</html>
